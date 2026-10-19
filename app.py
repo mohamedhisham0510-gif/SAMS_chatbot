@@ -38,6 +38,17 @@ STYLE = """
     padding: 12px;
 }
 
+/* Force dark text so it is readable even when the visitor uses dark mode */
+[data-testid="stChatMessage"],
+[data-testid="stChatMessage"] p,
+[data-testid="stChatMessage"] li,
+[data-testid="stChatMessage"] strong,
+[data-testid="stChatMessage"] em,
+[data-testid="stChatMessage"] span,
+[data-testid="stChatMessage"] div {
+    color: #1F3A5F;
+}
+
 .stButton > button {
     border: 1px solid #2A9D8F;
     color: #1F3A5F;
@@ -54,7 +65,7 @@ st.markdown(STYLE, unsafe_allow_html=True)
 
 WELCOME = (
     "Hi! I'm **SAMS**, your Student Assistant. 👋\n\n"
-    "Tell me what you want to know, for example *\"I'm barred because of attendance\"*, "
+    "Tell me what is happening, for example *\"I'm barred because of attendance\"*, "
     "or tap a topic below."
 )
 
